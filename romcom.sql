@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2017 at 10:00 AM
+-- Generation Time: Nov 23, 2017 at 09:25 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -36,7 +36,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `content`) VALUES
-(1, '<p><strong><span style="font-size: 72px;">About</span></strong></p><p><span style="font-size: 24px;">dito yung description ng site.</span></p><p><br></p><p><span style="font-size: 72px;"><strong>Contact</strong></span></p><p><span style="font-size: 72px;">09123545</span></p><p><span style="font-size: 72px;"><br></span></p><p><br></p><p><br></p>');
+(1, '<H5>Bakit ito nabuhay?</H5>\n\n<p>Romantic Comedy Movies have been a popular and profitable source of entertainment in the Philippines for the past century this is because of the kilig factor that every Filipino viewers are going for.  </p>\n\n<p>We always see recommended movies from various websites usually from international movies, so the idea came up, what if we make a platform, where people can look for the local romantic comedy movie/s they wish to find, to spice things up, we featured people from the Film industry and the Filipino youth on what’s their take in Filipino Romantic Comedy, how it changed their life, this is to make our audience identify and understand better their situation, specifically their personal growth and relationships. </p>\n\n<p>The name behind RomCom Circle is RomCom is short for Romantic Comedy Movies and Circle is another term for group, and circle symbolizes the endless cycle of love, and Romantic Comedy Movies. </p>\n');
 
 -- --------------------------------------------------------
 
@@ -119,7 +119,13 @@ INSERT INTO `photo` (`id`, `filename`, `active`, `dateadded`) VALUES
 (2, '46bbf8e2407a5289a288db4e6baac088.jpg', 1, '2017-11-22 05:15:08'),
 (3, '5ee685d5afdeb64cb8a3e6394e47c9bd.jpg', 1, '2017-11-22 05:19:20'),
 (4, '56786bf136897a7ac22dd63c82b6907a.jpg', 1, '2017-11-22 05:20:41'),
-(5, '5fbbf74bcee1c43a17e1a607be0de257.jpg', 1, '2017-11-22 05:21:52');
+(5, '5fbbf74bcee1c43a17e1a607be0de257.jpg', 1, '2017-11-22 05:21:52'),
+(6, '5474260b72b0a8d84498e455a9415bb2.png', 1, '2017-11-22 17:11:28'),
+(7, '626df8c837cc54277dac6586caf59fa8.jpg', 1, '2017-11-22 17:12:31'),
+(8, '43f37679e40802ef925ffa2f48f27f95.jpg', 1, '2017-11-22 17:14:13'),
+(9, '7bb9320c224420ca27d69229825d63bd.jpg', 1, '2017-11-22 17:18:19'),
+(10, '964a8bc75ac21552b11561932e1e0939.jpg', 1, '2017-11-22 17:20:55'),
+(11, 'a460e8597c00c2767c752cb6b820f1e9.jpg', 1, '2017-11-22 17:34:49');
 
 -- --------------------------------------------------------
 
@@ -132,17 +138,22 @@ CREATE TABLE `slider` (
   `title` varchar(255) NOT NULL,
   `description` varchar(500) NOT NULL,
   `photoid` int(11) NOT NULL,
-  `dateadded` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `dateadded` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `genre` text,
+  `showing` date DEFAULT NULL,
+  `director` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `slider`
 --
 
-INSERT INTO `slider` (`id`, `title`, `description`, `photoid`, `dateadded`) VALUES
-(3, 'Justice League', 'Fueled by his restored faith in humanity and inspired by Superman''s selfless act, Bruce Wayne enlists the help of his newfound ally, Diana Prince, to face an even greater enemy. Together, Batman and Wonder Woman work quickly to find and recruit a team of metahumans to stand against this newly awakened threat. But despite the formation of this unprecedented league of heroes--Batman, Wonder Woman, Aquaman, Cyborg and The Flash--it may already be too late to save the planet from an assault of catas', 3, '2017-11-22 05:19:20'),
-(4, 'Wonder Woman', 'An Amazon princess (Gal Gadot) finds her idyllic life on an island occupied only by female warriors interrupted when a pilot (Chris Pine) crash-lands nearby. After rescuing him, she learns that World War I is engulfing the planet, and vows to use her superpowers to restore peace. Directed by Patty Jenkins (Monster).', 4, '2017-11-22 05:20:41'),
-(5, 'Thor: Ragnarok', 'In Marvel Studios'' "Thor: Ragnarok," Thor is imprisoned on the other side of the universe without his mighty hammer and finds himself in a race against time to get back to Asgard to stop Ragnarok--the destruction of his homeworld and the end of Asgardian civilization--at the hands of an all-powerful new threat, the ruthless Hela. But first he must survive a deadly gladiatorial contest that pits him against his former ally and fellow Avenger--the Incredible Hulk!', 5, '2017-11-22 05:21:52');
+INSERT INTO `slider` (`id`, `title`, `description`, `photoid`, `dateadded`, `genre`, `showing`, `director`) VALUES
+(3, 'Justice League', 'Fueled by his restored faith in humanity and inspired by Superman''s selfless act, Bruce Wayne enlists the help of his newfound ally, Diana Prince, to face an even greater enemy. Together, Batman and Wonder Woman work quickly to find and recruit a team of metahumans to stand against this newly awakened threat. But despite the formation of this unprecedented league of heroes--Batman, Wonder Woman, Aquaman, Cyborg and The Flash--it may already be too late to save the planet from an assault of catas', 3, '2017-11-22 05:19:20', 'comedy', NULL, NULL),
+(4, 'Wonder Woman', 'An Amazon princess (Gal Gadot) finds her idyllic life on an island occupied only by female warriors interrupted when a pilot (Chris Pine) crash-lands nearby. After rescuing him, she learns that World War I is engulfing the planet, and vows to use her superpowers to restore peace. Directed by Patty Jenkins (Monster).', 4, '2017-11-22 05:20:41', NULL, NULL, NULL),
+(5, 'Thor: Ragnarok', 'In Marvel Studios'' "Thor: Ragnarok," Thor is imprisoned on the other side of the universe without his mighty hammer and finds himself in a race against time to get back to Asgard to stop Ragnarok--the destruction of his homeworld and the end of Asgardian civilization--at the hands of an all-powerful new threat, the ruthless Hela. But first he must survive a deadly gladiatorial contest that pits him against his former ally and fellow Avenger--the Incredible Hulk!', 5, '2017-11-22 05:21:52', NULL, NULL, NULL),
+(10, 'asdassd', 'ada', 10, '2017-11-22 17:20:55', 'comedy', '2017-11-16', NULL),
+(11, 'Daddys home', 'saome description goes here', 11, '2017-11-22 17:34:49', 'comedy', '2017-11-24', 'Jordan Sadiwa');
 
 -- --------------------------------------------------------
 
@@ -252,12 +263,12 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT for table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `user`
 --
