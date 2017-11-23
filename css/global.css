@@ -1,0 +1,10 @@
+main {
+	margin: 50px auto;
+}
+#main {
+	margin: 0 auto;
+}
+
+nav.navbar .navbar-brand {
+	font-family: 'Pacifico', cursive;
+}
