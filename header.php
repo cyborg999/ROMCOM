@@ -42,7 +42,7 @@
       }
       @media(min-width: 421px){
         .navbar-nav {
-          margin-left: 425px;
+          margin-left: 360px;
         }
         .navbar-dark .navbar-nav .nav-link {
           font-size: 14px;
@@ -54,7 +54,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top float-right bg-dark">
-        <a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.png"/>Usapang RomCom</a>
+        <a class="navbar-brand" href="index.php"><img class="logo" src="img/heart.png"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -68,6 +68,9 @@
             </li>
              <li class="nav-item">
               <a class="nav-link" href="movie.php">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bottomline.php">Bottomline</a>
             </li>
             <?php if(isset($_SESSION['user'])):?>
               <?php if($_SESSION['user']['type'] == "admin"):?>
@@ -86,11 +89,11 @@
               <a class="nav-link" href="contact.php">Contact</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="login.php">Login</a>
+              <a class="nav-link" href="signup.php">Login/Register</a>
             </li>
-            <li class="nav-item">
+           <!--  <li class="nav-item">
               <a class="nav-link" href="registration.php">Register</a>
-            </li>
+            </li> -->
           <?php endif ?>
           </ul>
           <form class="form-inline mt-2 mt-md-0" action="search.php" method="GET">

@@ -15,12 +15,12 @@
                 <div class="form-group form-group-md">
                     <label class="col-sm-2 control-label" for="description">Description</label>
                     <div class="col-sm-10">
-<textarea rows="10" class="form-control" name="description" id="description" placeholder="description"><?php
-if(isset($about['content'])){
-echo $about['content'];
-}
-?></textarea>
-<br/>
+                      <textarea rows="10" class="form-control" name="description" id="description" placeholder="description"><?php
+                      if(isset($about['content'])){
+                      echo $about['content'];
+                      }
+                      ?></textarea>
+                      <br/>
                       <input type="submit" id="save" class="btn btn-primary"/>
                     </div>
                   </div>
@@ -40,9 +40,19 @@ echo $about['content'];
           <?php endif ?>
           </div>
         </article>
+        <style type="text/css">
+          .phone {
+            width: 100%;
+          }
+        </style>
+          <div class="row">
+              <div class="col-sm-12">
+                <br>
+              </div>
+          </div>
          <div class="row">
-            <div class="col-sm-12">
-              <h4 class="display-4">Contact Us</h4>
+            <div class="col-sm-4">
+              <img class="phone" src="img/aas.png">
             </div>
             <div class="col-sm-12 col-lg-8"> 
               <h5>Drop us a line!</h5>
@@ -70,13 +80,6 @@ echo $about['content'];
               </form>
                       
             </div>
-            <div class="col-sm-12 col-lg-4">
-              <address>
-                <strong>Diane Go </strong><br>
-                Dianemarjorie.go@benilde.edu.ph<br>
-              </address>
-              <p>Let’s Keep in Touch! Do you have any questions? Or do you want to be featured here in our website?</p>
-            </div>    
           </div>
         
       </section>
